@@ -1,1 +1,3 @@
 - Creamos el esqueleto mediante spring boot y las operaciones básicas y las clases de prueba. Todo muy básico
+- Incluimos la API pasando los parametros por url
+- Creamos validadores, sin integrarlos en el flujo del codigo. Puesto que se entiende que la lista de operaciones aumentará, creamos un validador para cada validación posible dentro de las operaciones implementadas.
