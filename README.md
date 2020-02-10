@@ -1,0 +1,1 @@
+- Creamos el esqueleto mediante spring boot y las operaciones básicas y las clases de prueba. Todo muy básico
