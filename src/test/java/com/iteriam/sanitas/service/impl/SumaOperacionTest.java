@@ -7,9 +7,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.stereotype.Service;
 
 import com.iteriam.sanitas.service.Operacion;
 
+@Service
 public class SumaOperacionTest {
 
    private final Operacion operacion = new SumaOperacion();
