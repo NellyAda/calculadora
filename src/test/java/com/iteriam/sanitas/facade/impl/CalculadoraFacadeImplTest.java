@@ -39,7 +39,7 @@ public class CalculadoraFacadeImplTest {
    public void testCalcularSumaWrongParams() {
       final List<BigDecimal> params = Arrays.asList(new BigDecimal(25));
       ResultadoOperacion resultado = facade.calcular(params, "suma");
-      assertTrue(resultado.getValor().equals(new BigDecimal(0)));
+      assertTrue(resultado.getValor() == null);
       assertTrue(resultado.getErrMensajes().size() == 1);
    }
 
@@ -55,7 +55,7 @@ public class CalculadoraFacadeImplTest {
    public void testMalaOperacion() {
       final List<BigDecimal> params = Arrays.asList(new BigDecimal(25), new BigDecimal(3));
       ResultadoOperacion resultado = facade.calcular(params, "bla");
-      assertTrue(resultado.getValor().equals(new BigDecimal(0)));
+      assertTrue(resultado.getValor() == null);
       assertTrue(resultado.getErrMensajes().size() == 1);
    }
 
