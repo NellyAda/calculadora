@@ -9,7 +9,7 @@ public interface Validador {
     * Este metodo valida una lista de operandos
     * 
     * @param operandos - lista no nula de operandos
-    * @return true si se validan los operandos, eoc devuelve false
+    * @return lista de mensajes de error
     */
-   public boolean validar(List<BigDecimal> operandos);
+   public List<String> validar(List<BigDecimal> operandos);
 }

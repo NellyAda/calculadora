@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.iteriam.sanitas.facade.CalculadoraFacade;
+import com.iteriam.sanitas.model.ResultadoOperacion;
 
 @RestController
 @RequestMapping(path = "/calculadora")
@@ -21,10 +22,10 @@ public class CalculadoraController {
    public CalculadoraFacade facade;
 
    @GetMapping(value = "/calcular")
-   public ResponseEntity<BigDecimal> calcular(@RequestParam List<BigDecimal> operandos,
+   public ResponseEntity<ResultadoOperacion> calcular(@RequestParam List<BigDecimal> operandos,
          @RequestParam String operacion) {
-      BigDecimal resultado = facade.calcular(operandos, operacion);
-      return new ResponseEntity<BigDecimal>(resultado, HttpStatus.OK);
+      ResultadoOperacion resultado = facade.calcular(operandos, operacion);
+      return new ResponseEntity<ResultadoOperacion>(resultado, HttpStatus.OK);
    }
 
 }

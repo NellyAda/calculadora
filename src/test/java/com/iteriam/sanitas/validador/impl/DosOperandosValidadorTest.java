@@ -1,6 +1,5 @@
 package com.iteriam.sanitas.validador.impl;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.math.BigDecimal;
@@ -16,15 +15,15 @@ public class DosOperandosValidadorTest {
    @Test
    public void testValidarOK() {
       List<BigDecimal> operandos = Arrays.asList(new BigDecimal(0), new BigDecimal(0));
-      boolean valido = validador.validar(operandos);
-      assertTrue(valido);
+      List<String> errMensajes = validador.validar(operandos);
+      assertTrue(errMensajes.size() == 0);
    }
 
    @Test
    public void testValidarUnOperando() {
       List<BigDecimal> operandos = Arrays.asList(new BigDecimal(0));
-      boolean valido = validador.validar(operandos);
-      assertFalse(valido);
+      List<String> errMensajes = validador.validar(operandos);
+      assertTrue(errMensajes.size() == 1);
    }
 
 }
