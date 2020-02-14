@@ -50,7 +50,6 @@ public class CalculadoraFacadeImplTest {
       assertTrue(resultado.getValor().equals(new BigDecimal(22)));
    }
 
-   // @Disabled("Desactivado por el momento")
    @Test
    public void testMalaOperacion() {
       final List<BigDecimal> params = Arrays.asList(new BigDecimal(25), new BigDecimal(3));
